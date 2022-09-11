@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-// import 'LoginPage.module.scss'
-// import './LoginPage.module.scss'
-import './xl.module.css'
 function LoginPage() {
     return ( 
         <>
