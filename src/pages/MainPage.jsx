@@ -1,9 +1,19 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 
 function MainPage() {
     return ( 
-        <h1>MainPage</h1>
-     );
+        <>
+        <div className="mainContainer">
+            <Navbar/>
+            <div className="main">
+                <Header/>
+                
+             </div>
+        </div>
+        </>
+    );
 }
 
 export default MainPage;

@@ -13,7 +13,9 @@ function LoginPage() {
                         <input name="email" type="email" placeholder="Tên đăng nhập, Email & Số điện thoại" />
                         <input name="password" type="password" placeholder="Mật khẩu" />
                         <Link to='/main'>Quên mật khẩu?</Link>
-                        <button>Đăng nhập</button>
+                        <button>
+                        <Link to='/main'>Đăng nhập</Link>
+                        </button>
                     </form>
                     </div>
                 </div>
