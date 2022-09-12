@@ -1,8 +1,18 @@
 import React from 'react';
-
+import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 function Report() {
     return ( 
-        <h1>Report</h1>
+        <div className="mainContainer">
+        <Navbar/>
+        <div className="main">
+            <Header
+                status='Báo cáo'
+            />
+            <div className='content'>
+            </div>
+         </div>
+    </div>
      );
 }
 

@@ -1,32 +1,39 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-
+import Button_comp from './comp/Button_comp';
+import Phone_navbar from './Phone_navbar';
 function Navbar() {
     return ( 
-        <div className="navbar">
-            <div className="username">
-                <ion-icon name="person-circle-outline"></ion-icon>
-                <h1>username</h1>
-                <div className="navbar__block" >
-                    <ion-icon name="home-outline"></ion-icon>
-                    <Link to='/'>Đăng xuất</Link>
+        <>
+            <div className="navbar">
+                <div className="username">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                    <h1>username</h1>
+                    <Button_comp
+                        link='/'
+                        icon='home-outline'
+                        content='Đăng xuất'
+                    />
+                </div>
+                <div className="navigation">
+                    <Button_comp
+                        link='/status'
+                        icon='notifications-outline'
+                        content='Trạng thái hoạt động'
+                    />
+                    <Button_comp
+                        link='/setting'
+                        icon='settings-outline'
+                        content='Cài đặt và thông số'
+                    />
+                    <Button_comp
+                        link='/report'
+                        icon='bar-chart-outline'
+                        content='Báo cáo'
+                    />
                 </div>
             </div>
-            <div className="navigation">
-                <div className="navbar__block" >
-                    <ion-icon name="notifications-outline"></ion-icon>
-                    Trạng thái hoạt động
-                </div>
-                <div className="navbar__block" >
-                    <ion-icon name="settings-outline"></ion-icon>
-                    Cài đặt và thông số
-                </div>
-                <div className="navbar__block" >
-                    <ion-icon name="bar-chart-outline"></ion-icon>
-                    Báo cáo
-                </div>
-            </div>
-        </div>
+            <Phone_navbar/>            
+        </>
      );
 }
 

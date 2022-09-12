@@ -75,6 +75,7 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
+  cursor: pointer;
 }
 .login_container .form_container form button a {
   color: white;
@@ -117,7 +118,22 @@ a {
   height: 60px;
   margin: 24px 8px 0 16px;
 }
-.navbar .navbar__block ion-icon {
+.navbar .navbar__block button {
+  cursor: pointer;
+  background-color: white;
+  font-weight: 700;
+  line-height: 60px;
+  border-radius: 10px;
+  text-align: left;
+  color: var(--theme);
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+.navbar .navbar__block button:hover {
+  background-color: var(--theme_light);
+}
+.navbar .navbar__block button ion-icon {
   margin: 0 16px;
   font-size: 20px;
 }
@@ -136,17 +152,25 @@ a {
   font-size: 100px;
 }
 .navbar .username .navbar__block {
+  border-radius: 10px;
+  width: 160px;
+}
+.navbar .username .navbar__block button {
   background-color: var(--theme);
   color: white;
-  padding: 0 16px;
-  border-radius: 10px;
 }
 .navbar .username a {
   color: white;
 }
 
+.phone_navbar {
+  display: none;
+}
+
 .main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .main .header {
   height: 60px;
@@ -160,6 +184,12 @@ a {
 .main .header h1 {
   margin: 0 24px;
 }
+.main .header .navbar__block {
+  display: none;
+}
+.main .content {
+  flex: 1;
+}
 
 @media only screen and (max-width: 46.1875em) {
   .overlay_container {
@@ -167,5 +197,60 @@ a {
   }
   .navbar {
     display: none;
+  }
+  #header_time, #modeStatus {
+    display: none;
+  }
+  .header {
+    justify-content: center !important;
+    margin: 0 auto;
+  }
+  .header .navbar__block {
+    display: block !important;
+    height: 100%;
+    width: 120px;
+  }
+  .header .navbar__block button {
+    cursor: pointer;
+    background-color: #123478;
+    text-align: center;
+    color: white;
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+  .header .navbar__block button ion-icon {
+    margin: 0 16px;
+    font-size: 32px;
+  }
+  .phone_navbar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    border-top: 0.3px solid var(--theme);
+  }
+  .phone_navbar .navbar__block {
+    flex: 1;
+  }
+  .phone_navbar .navbar__block button {
+    cursor: pointer;
+    background-color: white;
+    line-height: 80px;
+    text-align: center;
+    color: var(--theme);
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+  .phone_navbar .navbar__block button:hover {
+    background-color: var(--theme_light);
+  }
+  .phone_navbar .navbar__block button ion-icon {
+    margin: 0 16px;
+    font-size: 32px;
+    height: 80px;
   }
 }/*# sourceMappingURL=App.css.map */

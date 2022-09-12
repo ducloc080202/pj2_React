@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Button_comp from './comp/Button_comp';
 function LoginPage() {
     return ( 
         <>
@@ -13,9 +14,11 @@ function LoginPage() {
                         <input name="email" type="email" placeholder="Tên đăng nhập, Email & Số điện thoại" />
                         <input name="password" type="password" placeholder="Mật khẩu" />
                         <Link to='/main'>Quên mật khẩu?</Link>
-                        <button>
-                        <Link to='/main'>Đăng nhập</Link>
-                        </button>
+                      
+                        <Button_comp
+                            link='/main'
+                            content='Đăng nhập'
+                        />
                     </form>
                     </div>
                 </div>

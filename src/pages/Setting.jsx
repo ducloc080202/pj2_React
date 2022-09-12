@@ -1,7 +1,18 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 function Setting() {
     return ( 
-        <h1>Setting</h1>
+        <div className="mainContainer">
+        <Navbar/>
+        <div className="main">
+            <Header
+                status='Cài đặt và thống số hoạt động'
+            />
+            <div className='content'>
+            </div>
+         </div>
+    </div>
      );
 }
 

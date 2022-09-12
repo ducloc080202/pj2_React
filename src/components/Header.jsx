@@ -1,9 +1,15 @@
 import React from 'react';
-function Header() {
+import Clock from './comp/Clock';
+import Button_comp from './comp/Button_comp';
+function Header(props) {
     return ( 
         <div className='header'>
-            <h1 id='modeStatus'>Trạng thái hoạt động</h1>
-            <h1 id='header_time'> 10/10/2022  10:10:10</h1>
+            <h1 id='modeStatus'>{props.status}</h1>
+            <Button_comp
+                        link='/'
+                        icon='home-outline'
+            />
+            <Clock/>
         </div>
      );
 }
