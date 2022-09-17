@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&family=Inter:wght@400;600;700&display=swap");
 * {
   padding: 0;
@@ -7,6 +8,7 @@
 
 :root {
   --theme: #1f329b;
+  --blue:#468ddd;
   --theme_light:#ECEEFF;
 }
 
@@ -137,14 +139,6 @@ a {
   margin: 0 16px;
   font-size: 20px;
 }
-.navbar .navbar__block .stateOn {
-  background-color: #179E2D;
-  color: white;
-}
-.navbar .navbar__block .stateOff {
-  background-color: #DE5E36;
-  color: white;
-}
 .navbar .username {
   height: 300px;
   border-bottom: 0.3px solid var(--theme);
@@ -169,6 +163,16 @@ a {
 }
 .navbar .username a {
   color: white;
+}
+
+.stateOn {
+  background-color: #179E2D !important;
+  color: white !important;
+}
+
+.stateOff {
+  background-color: #DE5E36 !important;
+  color: white !important;
 }
 
 .phone_navbar {
@@ -197,6 +201,39 @@ a {
 }
 .main .content {
   flex: 1;
+}
+.main .content .content_data {
+  background-color: var(--theme);
+  color: white;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  font-size: 26px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .content .content_data .progressbar {
+  width: 100%; /* Toàn màn hình */
+  background-color: rgb(222, 222, 222); /* thiết lập background */
+  border-radius: 20px;
+}
+.main .content .content_data .fill {
+  font-size: 16px;
+  text-align: right; /* canh chữ cho chữ */
+  color: #fff; /* thiết lập màu chữ */
+  border-radius: 20px;
+  background-color: var(--blue);
+}
+.main .content .content_status {
+  margin: 20px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 46.1875em) {

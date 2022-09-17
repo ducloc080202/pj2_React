@@ -2,7 +2,7 @@ const initState={
     time: 0,
     state: false,
     pressure: 0,
-    pushCount: 0
+    pushCount: 0,
 }
 function Reducer(state,action){
     switch(action.type){

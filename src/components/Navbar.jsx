@@ -37,7 +37,7 @@ function Navbar() {
                     <Button_comp
                         link='/setting'
                         icon='settings-outline'
-                        content='Cài đặt và thông số'
+                        content='Thông số hoạt động'
                     />
                     <Button_comp
                         link='/report'

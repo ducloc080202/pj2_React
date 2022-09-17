@@ -10,6 +10,9 @@ function Report() {
                 status='Báo cáo'
             />
             <div className='content'>
+                <div >
+                    
+                </div>
             </div>
          </div>
     </div>

@@ -9,8 +9,7 @@
 :root{
     // --theme:#123478;
     --theme: #1f329b;
-
-   
+    --blue:#468ddd;
     --theme_light:#ECEEFF;
 }
 html{
@@ -139,15 +138,7 @@ a{
                 font-size: 20px;
             }
         }
-        .stateOn{
-            background-color: #179E2D;
-            color: white;
-        }
-        .stateOff{
-            background-color: #DE5E36;
-            color: white;
-
-        }
+   
     }
     .username{
         height: 300px;
@@ -177,6 +168,14 @@ a{
     }
  
 }
+.stateOn{
+    background-color: #179E2D !important;
+    color: white !important;
+}
+.stateOff{
+    background-color: #DE5E36 !important;
+    color: white !important;
+}
 .phone_navbar{
     display: none;
 }
@@ -201,6 +200,41 @@ a{
     }
     .content{
         flex: 1;
+        .content_data{
+            background-color: var(--theme);
+            color: white;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            font-size: 26px;
+            height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .progressbar {
+                width: 100%; /* Toàn màn hình */
+                background-color: rgb(222, 222, 222); /* thiết lập background */
+                border-radius:20px;
+              }
+             .fill {
+                font-size: 16px;
+                text-align: right; /* canh chữ cho chữ */
+                // padding-top: 10px; /* thêm top padding */
+                // padding-bottom: 10px; /* thêmbottom padding */
+                color: #fff; /* thiết lập màu chữ */
+                border-radius:20px;
+                background-color: var(--blue);
+              }
+        }
+        .content_status{
+            margin: 20px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 32px;
+            font-weight: 700;
+        }
     }
 }
 @media only screen and (max-width: 46.1875em) {
