@@ -10,7 +10,14 @@ function Navbar() {
         const intervalCall = setInterval(() => {
             fetch('https://retoolapi.dev/9wNHKw/pj2')
             .then(p=>p.json())
-            .then(p=>state[1]({type:'change',payload:p[Math.floor(Math.random()*100)]}))
+            .then(p=>state[1]({
+                type:'change',
+                payload:{
+                    single:p[Math.floor(Math.random()*100)],
+                    fullData:p
+                }
+               
+            }))
           }, 5000);
           return () => {
             clearInterval(intervalCall);

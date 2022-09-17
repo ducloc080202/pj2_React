@@ -201,12 +201,19 @@ a {
 }
 .main .content {
   flex: 1;
+  padding: 20px;
+}
+.main .content td, .main .content th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.main .content table {
+  width: 100%;
 }
 .main .content .content_data {
   background-color: var(--theme);
   color: white;
   border-radius: 10px;
-  margin: 20px;
   padding: 20px;
   font-size: 26px;
   height: 480px;
@@ -227,7 +234,6 @@ a {
   background-color: var(--blue);
 }
 .main .content .content_status {
-  margin: 20px;
   height: 80px;
   line-height: 80px;
   text-align: center;

@@ -3,11 +3,15 @@ const initState={
     state: false,
     pressure: 0,
     pushCount: 0,
+    fullData:[]
 }
 function Reducer(state,action){
     switch(action.type){
         case 'change':
-            return action.payload
+            return {
+                ...action.payload.single,
+                fullData:action.payload.fullData
+            }
     }
 }
 export {initState} 

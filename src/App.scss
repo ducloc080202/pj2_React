@@ -18,6 +18,7 @@ html{
 a{
     text-decoration: none;
 }
+
 .body{
     display: flex;
     justify-content: center;
@@ -200,11 +201,22 @@ a{
     }
     .content{
         flex: 1;
+        padding: 20px;
+        td, th {
+            border: 1px solid #ddd;
+            padding: 8px;
+          }
+          table{
+            width: 100%;
+          }
+        .content_table{
+            // margin: 20px;
+        }
         .content_data{
             background-color: var(--theme);
             color: white;
             border-radius: 10px;
-            margin: 20px;
+            // margin: 20px;
             padding: 20px;
             font-size: 26px;
             height: 480px;
@@ -227,7 +239,7 @@ a{
               }
         }
         .content_status{
-            margin: 20px;
+            // margin: 20px;
             height: 80px;
             line-height: 80px;
             text-align: center;
