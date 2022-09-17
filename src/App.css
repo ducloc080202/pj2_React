@@ -137,6 +137,14 @@ a {
   margin: 0 16px;
   font-size: 20px;
 }
+.navbar .navbar__block .stateOn {
+  background-color: #179E2D;
+  color: white;
+}
+.navbar .navbar__block .stateOff {
+  background-color: #DE5E36;
+  color: white;
+}
 .navbar .username {
   height: 300px;
   border-bottom: 0.3px solid var(--theme);

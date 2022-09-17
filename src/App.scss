@@ -112,7 +112,7 @@ a{
     height: 100%;
     border-right: 0.3px solid var(--theme);
     color: var(--theme);
-
+    
     .navbar__block{
         cursor: pointer;
         font-weight: 700;
@@ -138,6 +138,15 @@ a{
                 margin: 0 16px;
                 font-size: 20px;
             }
+        }
+        .stateOn{
+            background-color: #179E2D;
+            color: white;
+        }
+        .stateOff{
+            background-color: #DE5E36;
+            color: white;
+
         }
     }
     .username{
@@ -166,7 +175,7 @@ a{
             color: white;
         }
     }
-   
+ 
 }
 .phone_navbar{
     display: none;

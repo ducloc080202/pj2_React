@@ -1,10 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Button_comp from './comp/Button_comp';
 import Phone_navbar from './Phone_navbar';
 import Context from './data/Context';
+import { Link } from "react-router-dom";
 function Navbar() {
     const state=useContext(Context)
-    console.log(state);
+    console.log(state[0]);
+    useEffect(()=>{
+        const intervalCall = setInterval(() => {
+            fetch('https://retoolapi.dev/9wNHKw/pj2')
+            .then(p=>p.json())
+            .then(p=>state[1]({type:'change',payload:p[Math.floor(Math.random()*100)]}))
+          }, 5000);
+          return () => {
+            clearInterval(intervalCall);
+          };
+    },[])
     return ( 
         <>
             <div className="navbar">
@@ -18,11 +29,11 @@ function Navbar() {
                     />
                 </div>
                 <div className="navigation">
-                    <Button_comp
-                        link='/status'
-                        icon='notifications-outline'
-                        content='Trạng thái hoạt động'
-                    />
+                    <div className="navbar__block"  >
+                        <Link to='/status'> 
+                            <button className={state[0].state?'stateOn':'stateOff'} type="button"><ion-icon name='notifications-outline'></ion-icon>Trạng thái hoạt động</button>
+                        </Link>
+                    </div>
                     <Button_comp
                         link='/setting'
                         icon='settings-outline'
