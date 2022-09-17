@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button_comp from './comp/Button_comp';
 import Phone_navbar from './Phone_navbar';
+import Context from './data/Context';
 function Navbar() {
+    const state=useContext(Context)
+    console.log(state);
     return ( 
         <>
             <div className="navbar">
@@ -32,7 +35,7 @@ function Navbar() {
                     />
                 </div>
             </div>
-            <Phone_navbar/>            
+            <Phone_navbar/>     
         </>
      );
 }

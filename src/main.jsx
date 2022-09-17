@@ -6,17 +6,19 @@ import Setting from './pages/Setting';
 import Status from './pages/Status';
 import Report from './pages/Report';
 import MainPage from './pages/MainPage';
-
+import Provider from './components/data/Provider'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+  <Provider>
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/main" element={<MainPage />} />
-      <Route path="/setting" element={<Setting />} />
-      <Route path="/status" element={<Status />} />
-      <Route path="/report" element={<Report />} />
-    </Routes>
-  </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/main" element={<MainPage />} />
+        <Route path="/setting" element={<Setting />} />
+        <Route path="/status" element={<Status />} />
+        <Route path="/report" element={<Report />} />
+      </Routes>
+    </BrowserRouter>
+  </Provider>
   </React.StrictMode>
 )
